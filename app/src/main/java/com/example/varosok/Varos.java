@@ -1,22 +1,23 @@
 package com.example.varosok;
 
-public class varos {
+
+public class Varos {
     private int id;
     private String name;
     private String country;
-    private int peoples;
+    private int population;
 
-    public varos(int id, String name, String country, int peoples) {
+    public Varos(int id, String name, String country, int population) {
         this.id = id;
         this.name = name;
         this.country = country;
-        this.peoples = peoples;
+        this.population = population;
     }
 
-    public varos(String name, String country, int peoples) {
+    public Varos(String name, String country, int population) {
         this.name = name;
         this.country = country;
-        this.peoples = peoples;
+        this.population = population;
     }
 
     public int getId() {
@@ -31,18 +32,18 @@ public class varos {
         return country;
     }
 
-    public int getPeoples() {
-        return peoples;
+    public int getPopulation() {
+        return population;
     }
 
-    public String getPeoplesText() {
-        return String.valueOf(peoples);
+    public String getPopulationText() {
+        return String.valueOf(population);
     }
-    public void setPeoplesText(String peoples) {
-        if (peoples.isEmpty()) {
-            this.peoples = 0;
+    public void setPopulationText(String population) {
+        if (population.isEmpty()) {
+            this.population = 0;
         } else {
-            this.peoples = Integer.parseInt(peoples);
+            this.population = Integer.parseInt(population);
         }
     }
 
@@ -58,7 +59,7 @@ public class varos {
         this.country = country;
     }
 
-    public void setPeoples(int peoples) {
-        this.peoples = peoples;
+    public void setPopulation(int population) {
+        this.population = population;
     }
 }

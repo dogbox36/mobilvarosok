@@ -1,5 +1,4 @@
 package com.example.varosok;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -57,7 +56,7 @@ public class InsertActivity extends AppCompatActivity {
             if (response.getResponseCode() >= 200 && response.getResponseCode() < 300) {
                 Toast toast = Toast.makeText(InsertActivity.this, "Sikeres hozzáadás", Toast.LENGTH_SHORT);
                 toast.show();
-                binding.setVaros(new varos(0, "", "", 0));
+                binding.setVaros(new Varos(0, "", "", 0));
             }
         }
     }
@@ -70,7 +69,7 @@ public class InsertActivity extends AppCompatActivity {
         binding = ActivityInsertBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.setCountry(new varos(0, "", "", 0));
+        binding.setVaros(new Varos(0, "", "", 0));
         binding.backButton.setOnClickListener( e -> {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
@@ -81,8 +80,8 @@ public class InsertActivity extends AppCompatActivity {
     }
 
     private void insert() {
-        varos country = binding.getVaros();
-        if (varos.getPeoples() == 0) {
+        Varos varos = binding.getVaros();
+        if (varos.getPopulation() == 0) {
             Toast.makeText(InsertActivity.this, "A lakosság mező kitöltése kötelező!",
                     Toast.LENGTH_SHORT).show();
             return;

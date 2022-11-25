@@ -3,17 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".InsertActivity">
+    tools:context=".InsertActivity"
+    android:background="@drawable/varos3">
     <data>
         <variable
             name="varos"
-            type="com.example.varosok.varos"/>
+            type="com.example.varosok.Varos"/>
     </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:layout_marginTop="200dp">>
 
 
         <EditText
@@ -22,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Név"
-            android:text="@={varos.nev}"
+            android:text="@={varos.name}"
             android:inputType="textPersonName"
             android:autofillHints="name"
             tools:ignore="HardcodedText" />
@@ -33,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Ország"
-            android:text="@={varos.orszag}"
+            android:text="@={varos.country}"
             android:inputType="textNoSuggestions"
             android:autofillHints=""
             tools:ignore="HardcodedText" />
@@ -45,28 +47,30 @@
             android:layout_height="wrap_content"
             android:hint="Lakosság"
             android:inputType="number"
-            android:text="@={varos.lakossagText}"
+            android:text="@={varos.populationText}"
             tools:ignore="HardcodedText"
             android:importantForAutofill="no" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:gravity="center"
+            android:layout_marginTop="200dp">
             <Button
                 android:id="@+id/submitButton"
-                android:layout_marginHorizontal="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
                 android:text="Felvétel"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText"
+                android:backgroundTint="@color/white"/>
             <Button
                 android:id="@+id/backButton"
-                android:layout_marginHorizontal="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
                 android:text="Vissza"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText"
+                android:backgroundTint="@color/white"
+                />
         </LinearLayout>
     </LinearLayout>
 </layout>

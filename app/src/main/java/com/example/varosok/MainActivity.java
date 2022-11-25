@@ -1,9 +1,11 @@
 package com.example.varosok;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.google.gson.Gson;
 
 import com.example.varosok.databinding.ActivityMainBinding;
 
@@ -11,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
 
-    public static String BASE_URL = "https://retoolapi.dev/EosRGi/varosok";
+    public static String BASE_URL = "https://retoolapi.dev/AAt5jw/varosok";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
